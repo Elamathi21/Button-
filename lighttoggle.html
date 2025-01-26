@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:block;
+            text-align: center;
+            height: 80vh;
+            transition: background 0.5s;
+            margin-top:80px;
+        }
+        body.light{
+            background-color: aliceblue;
+            color: black;
+        }
+        body.dark{
+            background-color: black;
+           color: aliceblue;
+        }
+        #btn{
+background-color: rgb(205, 179, 231);
+padding: 10px;
+font-size: 16px;
+border: 1px solid gray;
+border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is Toggle Light and Dark Mode</p>
+    <button id="btn">Button</button>
+    <script>
+        document.body.classList.add('light');
+        document.getElementById('btn').addEventListener('click',()=>
+    {
+        document.body.classList.toggle('light');
+        document.body.classList.toggle('dark');
+
+    })
+    </script>
+</body>
+</html>
